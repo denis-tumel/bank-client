@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="600.0" minWidth="606.0" prefHeight="600.0" prefWidth="606.0" style="-fx-background-color: #a295ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+    <top>
+        <AnchorPane id="header" prefHeight="155.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="511.0" layoutY="39.0" mnemonicParsing="false" onAction="#ActionLogout" prefHeight="28.0" prefWidth="69.0" text="выйти" textFill="#646464" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="39.0">
+                    <font>
+                        <Font name="Sitka Small Bold" size="10.0" />
+                    </font>
+                </Button>
+                <Label layoutX="43.0" layoutY="40.0" text="Окно пользователя" AnchorPane.leftAnchor="43.0" AnchorPane.topAnchor="40.0">
+                    <font>
+                        <Font name="Micra" size="24.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="155.0" layoutY="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Label fx:id="helloLabel" layoutX="43.0" layoutY="116.0" prefHeight="25.0" prefWidth="237.0" AnchorPane.rightAnchor="326.0" AnchorPane.topAnchor="116.0">
+                    <font>
+                        <Font name="Courier New Italic" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane id="body" prefHeight="245.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableCredit" layoutX="-169.0" layoutY="95.0" prefHeight="223.0" prefWidth="515.0">
+              <columns>
+                  <TableColumn fx:id="nameColumn" prefWidth="75.0" text="название" />
+                <TableColumn fx:id="time" prefWidth="75.0" text="время" />
+                <TableColumn fx:id="money" prefWidth="75.0" text="сумма к оплате" />
+                  <TableColumn fx:id="summa" prefWidth="75.0" text="оплачено" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children></AnchorPane>
+    </center>
+    <left>
+        <AnchorPane id="leftBorder" prefHeight="342.0" prefWidth="184.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="accountValue" layoutX="40.0" layoutY="3.0" prefHeight="23.0" prefWidth="214.0" text="На вашем счету: ">
+               <font>
+                  <Font name="Courier New Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="45.0" prefHeight="23.0" prefWidth="210.0" text="Выбор кредитования:">
+               <font>
+                  <Font name="Courier New Italic" size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    </left>
+    <right>
+        <AnchorPane id="body" prefHeight="245.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="-17.0" layoutY="44.0" mnemonicParsing="false" onAction="#ActionSelectCredit" text="выбрать" />
+         </children></AnchorPane>
+    </right>
+    <bottom>
+        <AnchorPane id="footer" prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <children>
+                <Separator layoutX="200.0" layoutY="13.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <Button layoutX="410.0" layoutY="50.0" mnemonicParsing="false" onAction="#ActionAccount" prefHeight="36.0" prefWidth="162.0" text="Пополнить счёт" />
+            <TextField fx:id="account" layoutX="410.0" layoutY="14.0" prefHeight="25.0" prefWidth="162.0" />
+            <Button fx:id="btnSum" disable="true" layoutX="42.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionSum" prefHeight="31.0" prefWidth="101.0" text="оплата кредита" />
+            <TextField fx:id="updateCredit" layoutX="154.0" layoutY="17.0" prefHeight="25.0" prefWidth="73.0" />
+            </children></AnchorPane>
+    </bottom>
+</BorderPane>

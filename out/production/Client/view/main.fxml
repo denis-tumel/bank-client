@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="VBoxMainView" prefHeight="269.0" prefWidth="417.0" style="-fx-background-color: #a295ff;" stylesheets="" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <children>
+        <Button fx:id="login_button" defaultButton="true" layoutX="136.0" layoutY="105.0" mnemonicParsing="false" onAction="#ActionLogin" prefHeight="38.0" prefWidth="132.0" text="Войти" textFill="#b95959">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button layoutX="136.0" layoutY="179.0" mnemonicParsing="false" onAction="#ActionRegister" prefHeight="39.0" prefWidth="132.0" text="Регистрация" textFill="#8d5959">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="130.0" layoutY="22.0" style="-fx-text-alignment: center;" text="Авторизация" textAlignment="CENTER">
+            <font>
+                <Font name="Micra" size="24.0" />
+            </font>
+        </Label>
+      <Separator layoutX="6.0" layoutY="66.0" prefHeight="5.0" prefWidth="411.0" />
+    </children>
+</AnchorPane>
